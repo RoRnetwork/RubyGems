@@ -64,3 +64,41 @@ DEPRECATION WARNING: silence is deprecated and will be removed from Rails 4.0. (
 Will fix it later.
 
 ####created simple scaffold resource in ruby 1.9.3 and rails 3.2
+
+Taking Gemfile.lock backup for ruby 1.9.3
+
+`Gemfile_ruby193_backup`
+
+###rvm use 2.2.2
+
+`bundle install`
+
+IMPORTANT! Some of the defaults have changed in Capybara 2.1. If you're experiencing failures,
+please revert to the old behaviour by setting:
+
+    Capybara.configure do |config|
+      config.match = :one
+      config.exact_options = true
+      config.ignore_hidden_elements = true
+      config.visible_text_only = true
+    end
+
+If you're migrating from Capybara 1.x, try:
+
+    Capybara.configure do |config|
+      config.match = :prefer_exact
+      config.ignore_hidden_elements = false
+    end
+
+Details here: http://www.elabs.se/blog/60-introducing-capybara-2-1
+
+####rails s
+
+still getting few warnings:
+
+/home/shan/.rvm/gems/ruby-2.2.2/gems/activesupport-3.2.13/lib/active_support/values/time_zone.rb:270: warning: circular argument reference - now
+DEPRECATION WARNING: Support for Rails < 4.1.0 will be dropped. (called from warn at /home/shan/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/forwardable.rb:183)
+
+DEPRECATION WARNING: silence is deprecated and will be removed from Rails 4.0. (called from column_definitions_with_silencer at (eval):2)
+
+rest of the function working fine.

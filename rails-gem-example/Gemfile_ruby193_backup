@@ -629,6 +629,7 @@ GEM
       websocket (~> 1.0)
     sendgrid (1.2.0)
       json
+      json
     sendgrid_toolkit (1.4.0)
       httparty (>= 0.7.6)
     sexp_processor (4.6.0)
@@ -894,6 +895,3 @@ DEPENDENCIES
   will_paginate
   workflow
   zip
-
-BUNDLED WITH
-   1.10.5
