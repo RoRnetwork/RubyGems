@@ -62,3 +62,5 @@ DEPRECATION WARNING: Support for Rails < 4.1.0 will be dropped. (called from war
 DEPRECATION WARNING: silence is deprecated and will be removed from Rails 4.0. (called from table_exists_with_silencer? at (eval):2)
 
 Will fix it later.
+
+####created simple scaffold resource in ruby 1.9.3 and rails 3.2

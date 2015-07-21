@@ -1,0 +1,21 @@
+h1 Listing unions
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @unions.each do |union|
+      tr
+        td = union.name
+        td = link_to 'Show', union
+        td = link_to 'Edit', edit_union_path(union)
+        td = link_to 'Destroy', union, data: {confirm: 'Are you sure?'}, method: :delete
+
+br
+
+= link_to 'New Union', new_union_path

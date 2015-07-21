@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @union.name
+
+= link_to 'Edit', edit_union_path(@union)
+'|
+= link_to 'Back', unions_path
