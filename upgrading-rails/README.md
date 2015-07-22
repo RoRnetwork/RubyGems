@@ -18,3 +18,25 @@ Running migration command:
 
     rake db:create
     rake db:migrate
+
+###Now upgrading Ruby version from 1.9.3 to 2.2.2
+
+If you have already installed `rvm` in your machine, To install preferred Ruby version
+
+    rvm install 2.2.2
+
+And now switch to Ruby 2.2.2,
+
+    rvm use 2.2.2
+
+Just mentioning Ruby version in `Gemfile`
+
+    ruby '2.2.2'
+
+Then, run your `rails server`
+
+Now everything is working fine but with one warning.
+
+    /home/shan/.rvm/gems/ruby-2.2.2/gems/activesupport-3.2.13/lib/active_support/values/time_zone.rb:270: warning: circular argument reference - now
+
+This stats activesupport-3.2.13 is not supported with Ruby 2.2.2. So we need to upgrade the Rails version.
