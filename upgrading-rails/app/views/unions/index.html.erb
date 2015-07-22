@@ -1,0 +1,23 @@
+<h1>Listing unions</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @unions.each do |union| %>
+  <tr>
+    <td><%= union.name %></td>
+    <td><%= link_to 'Show', union %></td>
+    <td><%= link_to 'Edit', edit_union_path(union) %></td>
+    <td><%= link_to 'Destroy', union, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Union', new_union_path %>
