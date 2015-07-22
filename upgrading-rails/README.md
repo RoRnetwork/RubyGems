@@ -173,3 +173,74 @@ If you look the newly created model `artcile.rb`.  It does not contain `attr_acc
 
 
 Great! Now everything is working. Then whatelse?
+
+Need generate rails 4.2.3 new folders and files right?
+
+Rails provides the `rails:update` rake task. After updating the Rails version in the Gemfile, run this rake task. This will help you with the creation of new files and changes of old files in an interactive session.
+
+    rake rails:update
+
+    conflict  config/boot.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/boot.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/boot.rb
+       exist  config
+    conflict  config/routes.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/routes.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/routes.rb
+    conflict  config/application.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/application.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/application.rb
+    conflict  config/environment.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/environment.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/environment.rb
+    conflict  config/secrets.yml
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/secrets.yml? (enter "h" for help) [Ynaqdh] y
+       force  config/secrets.yml
+       exist  config/environments
+    conflict  config/environments/development.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/environments/development.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/environments/development.rb
+    conflict  config/environments/production.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/environments/production.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/environments/production.rb
+    conflict  config/environments/test.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/environments/test.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/environments/test.rb
+       exist  config/initializers
+      create  config/initializers/assets.rb
+   identical  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+    conflict  config/initializers/inflections.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/initializers/inflections.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/initializers/inflections.rb
+    conflict  config/initializers/mime_types.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/initializers/mime_types.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/initializers/mime_types.rb
+    conflict  config/initializers/session_store.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/initializers/session_store.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/initializers/session_store.rb
+    conflict  config/initializers/wrap_parameters.rb
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/initializers/wrap_parameters.rb? (enter "h" for help) [Ynaqdh] y
+       force  config/initializers/wrap_parameters.rb
+       exist  config/locales
+    conflict  config/locales/en.yml
+Overwrite /home/shan/workspace/RubyGems/upgrading-rails/config/locales/en.yml? (enter "h" for help) [Ynaqdh] y
+       force  config/locales/en.yml
+        gsub  config/initializers/cookies_serializer.rb
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+
+Note:
+
+  Before confirming each file we need to take a backup of existing files. It overrides the `routes.rb` file. so again I have added existing resources. And no need to create `secret.yml` file it automatically generate it.
+
+
+Thats it. Start Upgrading Rails to 4.2.3.
+
+
+Reference:
+  Upgrading Ruby on Rails Guide(http://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html)
