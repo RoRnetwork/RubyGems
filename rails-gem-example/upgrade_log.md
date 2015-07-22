@@ -102,3 +102,17 @@ DEPRECATION WARNING: Support for Rails < 4.1.0 will be dropped. (called from war
 DEPRECATION WARNING: silence is deprecated and will be removed from Rails 4.0. (called from column_definitions_with_silencer at (eval):2)
 
 rest of the function working fine.
+
+### upgrading rails from 3.2.13 to 4.2.3
+
+Just removed Gemfile.lock file, and running `bundle install`
+
+Done successfully !!!
+
+###rails s
+
+/home/shan/.rvm/gems/ruby-2.2.2/gems/activerecord-4.2.3/lib/active_record/dynamic_matchers.rb:26:in `method_missing': undefined method `attr_accessible' for #<Class:0x00000002c03be8> (NoMethodError)
+
+To fix the above error, added `gem 'protected_attributes'` in `Gemfile`.
+
+`bundle install` & `rails s`
