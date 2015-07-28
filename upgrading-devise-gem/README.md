@@ -1,4 +1,4 @@
-== Upgrading Devise
+==Upgrading Devise
 
 Devise version '2.2.7' to 3.5.1
 
